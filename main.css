@@ -1,0 +1,140 @@
+/*start of general rules*/
+:root {
+    scroll-behavior: smooth;
+}
+
+body,body * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+/* end of general rules */
+body {
+    position: relative;
+    background-image: url("Background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+.menu {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (min-width: 768px) {
+    .menu {
+        width: 350px;
+    }
+}
+
+.menu .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #E0E0E0;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu .header > p{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.menu .header p svg {
+    width: 19px;
+}
+
+.menu .header > svg{
+    width: 19px;
+    transition: all .2s;
+}
+
+.menu .header .rotateArrow {
+    transform: rotate(180deg);
+}
+
+.menu .list {
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu .hideList {
+    visibility: hidden;
+}
+
+.menu .list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: padding .3s;
+}
+
+.menu .list li:hover {
+    background-color: #E0E0E0;
+    padding-left: 20px;
+}
+
+.menu .list li:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.menu .list li svg{
+    width: 22px;
+    margin: 0 10px 0 0;
+}
+
+.scrollUp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:transparent;
+    border: none;
+    display: none;
+}
+
+@media (max-width:424px) {
+    .scrollUp {
+        bottom:60px;
+        right: 29px;
+    }
+}
+
+.scrollUp.show {
+    display: block;
+}
+
+.scrollUp svg {
+    width: 22px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 100vh;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #4DD0E1;
+}
